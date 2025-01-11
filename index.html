@@ -18,11 +18,11 @@
           <li class="section"><a href="../index.html">Home</a></li>
           <li class="section"><a href="../index.html#about">About Us</a></li>
           <li class="section"><a href="../index.html#services">Services</a></li>
-          <li class="auth-button1"><a href="/pages/registration.html">Log In</a></></li>
+          <li class="auth-button1"><a href="/pages/login.html">Log In</a></></li>
         </ul>
       </nav>
     </div>
-
+    <!-- Hero Section -->
     <section class="hero">
       <div class="container">
         <div class="hero-content">
@@ -265,6 +265,22 @@
       </div>
     </footer> -->
 
-    <script src="script.js"></script>
+    
+    <script>
+        // Get all "Get Started Now" buttons and add click handlers
+        document.querySelectorAll('.primary-btn, .primary-btn2').forEach(button => {
+            button.addEventListener('click', () => {
+                window.location.href = '/pages/login.html';
+            });
+        });
+    
+        // Add click handler for "Learn More" button
+        document.querySelector('.secondary-btn').addEventListener('click', () => {
+            // Smooth scroll to How It Works section
+            document.getElementById('how-it-works').scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+        });
+    </script>
   </body>
 </html>

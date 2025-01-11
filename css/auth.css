@@ -16,43 +16,10 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f2f2f2;
-  }
-
-
+    height: 100%;
   
-  /* Navigation Bar */
-  .nav-bar {
-    height: 50px;
-    background-color: #198cea;
-    color: white;
-    padding: 10px;
-    display: flex;
-    align-items: center;
   }
   
-  .logo {
-    margin-left: 30px;
-  }
-  
-  /* Navigation Links */
-  
-  .nav-links ul li{
-    display: inline-block;
-    margin-right: 30px;
-    text-decoration: none;
-    border-bottom: 1.5px solid transparent;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .nav-links ul li a{
-    text-decoration: none;
-    color: var(--white);
-  }
-
-  .nav-links ul li:hover{
-    border-bottom: 1.5px solid var(--white);
-    cursor: pointer;
-  }
 
   .auth-button1{
     font-size: medium;
@@ -84,6 +51,7 @@ body {
     align-items: center;
     min-height: calc(100vh - 70px);
     padding: 20px;
+    margin-top: 4rem;
   }
   
   .auth-box {

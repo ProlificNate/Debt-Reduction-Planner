@@ -5,24 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/auth.css" />
     <link rel="stylesheet" href="../css/styles.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/aws-amplify@5.0.4/dist/aws-amplify.min.js"></script>
+    <script src="/js/auth.js" type="module"></script>
   </head>
   <body>
-    <!-- Navigation Bar -->
-    <div class="nav-bar">
-        <img src="../assets/images/Dedox.png" alt="Logo" class="logo" />
-  
-        <!-- Navigation links -->
-        <nav class="nav-links">
-          <ul>
-            <li class="section"><a href="../index.html">Home</a></li>
-            <li class="section"><a href="../index.html#about">About Us</a></li>
-            <li class="section"><a href="../index.html#services">Services</a></li>
-            <li class="auth-button1"><a href="/pages/login.html">Log In</a></></li>
-          </ul>
-        </nav>
-      </div>
+    
     <div class="auth-container">
       <div class="auth-box">
+        <center> <a href="../index.html"><img src="../assets/images/Dedox.png" alt="Logo" class="logo" /></a> </center>
         <h2>Create Account</h2>
         <p>Start your journey to becoming debt-free</p>
         <form class="auth-form">
@@ -93,5 +83,45 @@
           <p>&copy; 2025 Debt Detox. All rights reserved.</p>
         </div>
       </footer>
+      <script>
+        // Toggle password visibility
+        document.querySelectorAll(".toggle-password").forEach((button) => {
+          button.addEventListener("click", function () {
+            const input = this.previousElementSibling;
+            const type =
+              input.getAttribute("type") === "password" ? "text" : "password";
+            input.setAttribute("type", type);
+          });
+        });
+  
+        // Switch between login and registration forms
+        document.querySelectorAll(".switch-form").forEach((link) => {
+          link.addEventListener("click", function (e) {
+            e.preventDefault();
+            const forms = document.querySelectorAll(".form-container");
+            forms.forEach((form) => {
+              form.style.display =
+                form.style.display === "none" ? "block" : "none";
+            });
+          });
+        });
+  
+        // Form submission handlers
+        document
+          .getElementById("loginForm")
+          .addEventListener("submit", function (e) {
+            e.preventDefault();
+            // Add your login logic here
+            console.log("Login submitted");
+          });
+  
+        document
+          .getElementById("registerForm")
+          .addEventListener("submit", function (e) {
+            e.preventDefault();
+            // Add your registration logic here
+            console.log("Registration submitted");
+          });
+      </script>
   </body>
 </html>
