@@ -25,40 +25,38 @@ body {
     top: 0;
     justify-content: space-between;
     align-items: center;
-  }
+}
 
-  .nav-links ul li{
+.nav-links ul li {
     list-style-type: none;
     display: inline-block;
     margin-right: 30px;
     font-weight: bold;
-  }
+}
 
-  .nav-links ul li a{
+.nav-links ul li a {
     text-decoration: none;
     color: #FFF;
     border-bottom: 1.5px solid transparent;
     transition: 0.5s border-bottom ease-in-out;
-  }
+}
 
-  .nav-links ul li a:hover{
+.nav-links ul li a:hover {
     border-bottom: 1.5px solid #fff;
-  }
-  
-  .logo{
+}
+
+.logo {
     height: 80px;
     width: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-left: 20px;
-  }
-
-.signup-btn{
-    background: #d70000;
-    padding: 5px 10px;
-    border-radius: 5px;
 }
+
+
+
+
 
 /* Hero Section */
 .hero {
@@ -282,104 +280,6 @@ body {
 .primary-btn2:hover{
     background-color: #198ceade;
 }
-/* Footer */
-/* .footer {
-    background-color: #1E88E5;
-    color: white;
-    padding: 40px 0;
-    font-family: Arial, sans-serif;
-}
-
-.footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-}
-
-.footer-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.footer-nav li {
-    margin-bottom: 15px;
-}
-
-.footer-nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-}
-
-.footer-nav a:hover {
-    text-decoration: underline;
-}
-
-.footer-contact {
-    font-size: 16px;
-}
-
-.social-links {
-    margin-top: 20px;
-}
-
-.social-links h3 {
-    margin-bottom: 15px;
-}
-
-.social-icons {
-    display: flex;
-    gap: 15px;
-}
-
-.social-icons a {
-    width: 40px;
-    height: 40px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s;
-}
-
-.social-icons a:hover {
-    background: rgba(255, 255, 255, 0.2);
-}
-
-.social-icons img {
-    width: 20px;
-    height: 20px;
-}
-
-.footer-bottom {
-    margin-top: 30px;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 14px;
-}
-
-@media (max-width: 768px) {
-    .footer-container {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    
-    .footer-bottom {
-        flex-direction: column;
-        text-align: center;
-        gap: 10px;
-    }
-}
-    */
-
     
 .footer {
     /* background-color: #1a1a1a; */
@@ -488,3 +388,91 @@ body {
   .auth-container {
     min-height: calc(100vh - 70px - 400px); /* Adjusted to account for footer height */
   }
+
+
+    /* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    .nav-bar {
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        display: flex;
+        font-size: 0.7em;
+    }
+
+  
+    
+
+    .logo {
+        margin: 0 auto;
+        width: 50px;
+        height: 50px;
+
+    }
+
+    .signup-btn {
+        margin: 10px 0;
+    }
+
+    .hero {
+        position: relative;
+        padding: 20px 10px;
+        color: white; /* Adjust text color for better visibility */
+        overflow: hidden;
+        
+    }
+    .hero-image{
+        display: none;
+    }
+    .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('..//assets/images/HeroImage.jpg'); 
+        background-size: cover;
+        background-position: center;
+        filter: blur(8px); /* Adjust the blur level as needed */
+        z-index: -1;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 20px; 
+    }
+
+    .hero p {
+        font-size: 15px; 
+    }
+    .hero-buttons button {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+    .primary-btn{
+        height: 35px;
+        
+    }
+
+    .service-cards{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .card {
+        margin: 10px 0;
+        width: 100%;
+    }
+
+
+}

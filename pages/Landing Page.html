@@ -23,7 +23,18 @@
           </ul>
         </nav>
       </div>
-    </header>
+      <div class="hamburger" onclick="toggleMenu()">
+        &#9776;
+    </div>
+</header>
+<div class="mobile-nav-links" id="mobileNavLinks">
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</div>
 
     <section class="hero">
       <div class="container">
@@ -178,20 +189,20 @@
       <div class="footer-container">
         <div class="footer-nav">
           <ul>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#how-it-works">How it Works</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="how it works.html">How it Works</a></li>
             <li><a href="#pricing">Pricing</a></li>
-            <li><a href="#faq">FAQ</a></li>
-            <li><a href="#contact">Contact Us</a></li>
+            <!-- <li><a href="faq.html">FAQ</a></li> -->
+            <li><a href="contact.html">Contact Us</a></li>
           </ul>
         </div>
 
         <div class="footer-nav">
           <ul>
-            <li><a href="#privacy">Privacy Policy</a></li>
-            <li><a href="#terms">Terms of Use</a></li>
-            <li><a href="#disclaimer">Disclaimer</a></li>
+            <li><a href="privacy policy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Use</a></li>
+            <!-- <li><a href="#disclaimer">Disclaimer</a></li> -->
           </ul>
         </div>
 
@@ -229,5 +240,15 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+      function toggleMenu() {
+    var mobileNavLinks = document.getElementById("mobileNavLinks");
+    if (mobileNavLinks.style.display === "block") {
+        mobileNavLinks.style.display = "none";
+    } else {
+        mobileNavLinks.style.display = "block";
+    }
+}
+    </script>
   </body>
 </html>
